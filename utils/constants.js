@@ -16,3 +16,13 @@ export const JOB_SORT_BY = {
   ASCENDING: 'a-z',
   DESCENDING: 'z-a',
 };
+
+export const JOB_OUI_NON = {
+  OUI: 'Oui',
+  NON: 'Non',
+};
+
+export const JOB_MATIN_SOIR = {
+  MATIN: 'Matin',
+  SOIR: 'Soir',
+};

@@ -1,10 +1,12 @@
 import { FormRow, FormRowSelect, SubmitBtn } from '../components';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { useOutletContext } from 'react-router-dom';
-import { JOB_STATUS, JOB_TYPE } from '../../../utils/constants';
+
+import { JOB_MATIN_SOIR, JOB_OUI_NON } from '../../../utils/constants';
 import { Form, redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import customFetch from '../utils/customFetch';
+import FormRowTextArea from '../components/FormRowTextArea';
 
 export const action =
   (queryClient) =>
@@ -28,28 +30,136 @@ const AddJob = () => {
   return (
     <Wrapper>
       <Form method='post' className='form'>
-        <h4 className='form-title'>add job</h4>
-        <div className='form-center'>
-          <FormRow type='text' name='position' />
-          <FormRow type='text' name='company' />
-          <FormRow
-            type='text'
-            labelText='job location'
-            name='jobLocation'
-            defaultValue={user.location}
-          />
-          <FormRowSelect
-            labelText='job status'
-            name='jobStatus'
-            defaultValue={JOB_STATUS.PENDING}
-            list={Object.values(JOB_STATUS)}
-          />
-          <FormRowSelect
-            labelText='job type'
-            name='jobType'
-            defaultValue={JOB_TYPE.FULL_TIME}
-            list={Object.values(JOB_TYPE)}
-          />
+        <h4 className='form-title'>Service</h4>
+
+        <div className='form-row'>
+          <fieldset>
+            <br />
+            <br />
+            <div className='form-center'>
+              <FormRow name='dateService' type='date' />
+
+              <FormRowSelect
+                name='serviceDu'
+                labelText='Service du:'
+                defaultValue=''
+                list={Object.values(JOB_MATIN_SOIR)}
+              />
+            </div>
+            <br />
+            <br />
+          </fieldset>
+          <br />
+          <fieldset>
+            <br />
+            <br />
+            <div className='form-center'>
+              <FormRow type='text' name='nomCapitaine' />
+
+              <FormRowSelect
+                name='nomCapitaineRadio'
+                labelText='A eu une radio!'
+                defaultValue=''
+                list={Object.values(JOB_OUI_NON)}
+              />
+            </div>
+            <br />
+            <br />
+          </fieldset>
+
+          <br />
+          <fieldset>
+            <br />
+            <br />
+
+            <div className='form-center'>
+              <FormRow type='text' name='agentDuParcking' />
+
+              <FormRowSelect
+                name='agentDuParcking'
+                labelText='A eu une radio!'
+                defaultValue=''
+                list={Object.values(JOB_OUI_NON)}
+              />
+            </div>
+            <br />
+            <br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <br />
+            <br />
+
+            <div className='form-center'>
+              <FormRow type='text' name='nomHotesse1' />
+
+              <FormRowSelect
+                name='hotesseRadio1'
+                labelText='A eu une radio!'
+                defaultValue=''
+                list={Object.values(JOB_OUI_NON)}
+              />
+            </div>
+            <br />
+            <br />
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <br />
+            <br />
+
+            <div className='form-center'>
+              <FormRow type='text' name='nomHotesse2' />
+
+              <FormRowSelect
+                name='hotesseRadio2'
+                labelText='A eu une radio!'
+                defaultValue=''
+                list={Object.values(JOB_OUI_NON)}
+              />
+            </div>
+
+            <br />
+            <br />
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <br />
+            <br />
+
+            <div className='form-center'>
+              <FormRow type='text' name='nomHotesse3' />
+
+              <FormRowSelect
+                name='hotesseRadio'
+                labelText='A eu une radio!'
+                defaultValue=''
+                list={Object.values(JOB_OUI_NON)}
+              />
+            </div>
+
+            <br />
+            <br />
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <br />
+            <br />
+
+            <div className='form-center'>
+              <FormRowTextArea type='textarea' name='Observation' />
+            </div>
+
+            <br />
+            <br />
+          </fieldset>
           <SubmitBtn formBtn />
         </div>
       </Form>
