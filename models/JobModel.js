@@ -7,6 +7,7 @@ const JobSchema = new mongoose.Schema(
     nomCapitaine: String,
     nomCapitaineRadio: String,
     agentDuParcking: String,
+    agentDuParckingRadio: String,
     nomHotesse1: String,
     hotesseRadio1: String,
     nomHotesse2: String,

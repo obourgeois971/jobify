@@ -76,7 +76,7 @@ const AddJob = () => {
               <FormRow type='text' name='agentDuParcking' />
 
               <FormRowSelect
-                name='agentDuParcking'
+                name='agentDuParckingRadio'
                 labelText='A eu une radio!'
                 defaultValue=''
                 list={Object.values(JOB_OUI_NON)}

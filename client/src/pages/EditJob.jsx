@@ -114,7 +114,7 @@ const EditJob = () => {
               <FormRow
                 type='text'
                 name='agentDuParcking'
-                defaultValue={job.nomCapitaine}
+                defaultValue={job.agentDuParcking}
               />
 
               <FormRowSelect

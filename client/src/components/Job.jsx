@@ -12,6 +12,7 @@ const Job = ({
   serviceDu = '',
   nomCapitaine = '',
   agentDuParcking = '',
+  agentDuParckingRadio = '',
   nomHotesse1 = '',
   hotesseRadio1 = '',
   nomHotesse2 = '',
