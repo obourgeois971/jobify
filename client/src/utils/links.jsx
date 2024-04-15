@@ -17,21 +17,21 @@ const links = [
     path: 'all-jobs',
     icon: <MdQueryStats />,
   },
-  {
-    text: 'stats',
-    path: 'stats',
-    icon: <IoBarChartSharp />,
-  },
-  {
-    text: 'profile',
-    path: 'profile',
-    icon: <ImProfile />,
-  },
-  {
-    text: 'admin',
-    path: 'admin',
-    icon: <MdAdminPanelSettings />,
-  },
+  // {
+  //   text: 'stats',
+  //   path: 'stats',
+  //   icon: <IoBarChartSharp />,
+  // },
+  // {
+  //   text: 'profile',
+  //   path: 'profile',
+  //   icon: <ImProfile />,
+  // },
+  // {
+  //   text: 'admin',
+  //   path: 'admin',
+  //   icon: <MdAdminPanelSettings />,
+  // },
 ];
 
 export default links;
